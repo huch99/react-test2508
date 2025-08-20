@@ -3,14 +3,23 @@ import React from 'react';
 const MyHeader = () => {
     return (
         <>
-            <div
+            <div className='rubik-bubbles-regular'
                 style={{
                     width: '200px',
                     height: '100%',
                     textAlign: 'center',
-                    borderRight: '1px solid #000'
+                    fontSize: '30px',
+                    padding: 0,
+                    boxShadow: '0 0 5px 2px #ccc',
+                    borderRadius: '20px'
                 }}
-            >LOGO</div>
+            >
+                <span className="red">J</span>
+                <span className="yellow">U</span>
+                <span className="blue">S</span>
+                <span className="purple">T</span> <br />
+                <span>Shopping</span>
+            </div>
 
             <div
                 style={{

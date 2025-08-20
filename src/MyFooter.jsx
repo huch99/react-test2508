@@ -3,13 +3,16 @@ import React from 'react';
 const MyFooter = () => {
     return (
         <>
-            <div
+            <div className='rubik-bubbles-regular'
                 style={{
                     width: '200px',
                     height: '100%',
-                    borderRight: '1px solid #000'
+                    fontSize: '30px',
                 }}
-            >LOGO</div>
+            >
+                <span>JUST</span> <br />
+                <span>Shopping</span>
+            </div>
             <div
                 style={{
                     width: '800px',

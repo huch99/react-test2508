@@ -21,7 +21,6 @@ const Header = styled.div`
     flex-direction: row;
     box-sizing: border-box;
     margin: 5px auto;
-    border: 1px solid #000;
 `;
 
 const ImageSlide = styled.div`
@@ -45,9 +44,9 @@ const Footer = styled.div`
     height: 100px;
     display: flex;
     flex-direction: row;
-    border: 1px solid #000;
     box-sizing: border-box;
     margin: 5px auto;
+    background-color: #ccc;
 `;
 
 const WebDesign = () => {
