@@ -224,7 +224,7 @@ const WebDesign = () => {
             </Header>
 
             <ImageSlide>
-                <ImageSlider></ImageSlider>
+                <ImageSlider/>
             </ImageSlide>
 
             <Section>
