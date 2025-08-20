@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
+import tsirts from './assets/tsirts.jpg';
+import bluejeans from './assets/bluejeans.jpg';
+import gadigun from './assets/gadigun.jpg';
+
 const Container = styled.div`
     width: 1200px;
     height: auto;
@@ -51,10 +55,14 @@ const WebDesign = () => {
     const [isOnGal, setIsOnGal] = useState(false);
 
     const ImageSlider = () => {
+        // const images = [
+        //     '/tsirts.jpg',
+        //     '/bluejeans.jpg',
+        //     '/gadigun.jpg'
+        // ]
+
         const images = [
-            '/tsirts.jpg',
-            '/bluejeans.jpg',
-            '/gadigun.jpg'
+            tsirts, bluejeans, gadigun
         ]
 
         const [imgList, setImgList] = useState([...images]);
