@@ -244,7 +244,8 @@ const WebDesign = () => {
                                 cursor: 'pointer',
                                 backgroundColor: isOnInfo ? 'grey' : 'white'
                             }}
-                            onClick={() => {
+                            onClick={(e) => {
+                                e.preventDefault();
                                 setIsOnInfo(true);
                                 setIsOnGal(false);
                             }}
@@ -255,7 +256,8 @@ const WebDesign = () => {
                                 cursor: 'pointer',
                                 backgroundColor: isOnGal ? 'grey' : 'white'
                             }}
-                            onClick={() => {
+                            onClick={(e) => {
+                                e.preventDefault();
                                 setIsOnInfo(false);
                                 setIsOnGal(true);
                             }}
