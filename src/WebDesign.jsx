@@ -1,10 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import ImageSlider from './ImageSlider';
-
-import tsirts from './assets/tsirts.jpg';
-import bluejeans from './assets/bluejeans.jpg';
-import gadigun from './assets/gadigun.jpg';
+import MySection from './MySection';
+import MyHeader from './MyHeader';
+import MyFooter from './MyFooter';
 
 const Container = styled.div`
     width: 1200px;
@@ -52,71 +51,12 @@ const Footer = styled.div`
 `;
 
 const WebDesign = () => {
-    const [isOnInfo, setIsOnInfo] = useState(true);
-    const [isOnGal, setIsOnGal] = useState(false);
+
 
     return (
         <Container>
             <Header>
-                <div
-                    style={{
-                        width: '200px',
-                        height: '100%',
-                        textAlign: 'center',
-                        borderRight: '1px solid #000'
-                    }}
-                >LOGO</div>
-
-                <div
-                    style={{
-                        width: 'calc(100% - 200px)',
-                        height: '100%',
-                        padding: '25px'
-                    }}
-                >
-                    <ul
-                        style={{
-                            listStyleType: 'none',
-                            display: 'flex',
-                            flexDirection: 'row',
-                            margin: '0 0 0 325px'
-                        }}
-                    >
-                        <li className="topMenu"
-                        >탑
-                            <ul>
-                                <li className="subMenu">블라우스</li>
-                                <li className="subMenu">티</li>
-                                <li className="subMenu">셔츠</li>
-                                <li className="subMenu">니트</li>
-                            </ul>
-                        </li>
-                        <li className="topMenu">아우터
-                            <ul>
-                                <li className="subMenu">자켓</li>
-                                <li className="subMenu">코트</li>
-                                <li className="subMenu">가디건</li>
-                                <li className="subMenu">머플러</li>
-                            </ul>
-                        </li>
-                        <li className="topMenu">팬츠
-                            <ul>
-                                <li className="subMenu">청바지</li>
-                                <li className="subMenu">짧은바지</li>
-                                <li className="subMenu">긴바지</li>
-                                <li className="subMenu">레깅스</li>
-                            </ul>
-                        </li>
-                        <li className="topMenu">악세서리
-                            <ul>
-                                <li className="subMenu">귀고리</li>
-                                <li className="subMenu">목걸이</li>
-                                <li className="subMenu">반지</li>
-                                <li className="subMenu">팔찌</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                <MyHeader />
             </Header>
 
             <ImageSlide>
@@ -124,85 +64,11 @@ const WebDesign = () => {
             </ImageSlide>
 
             <Section>
-                <div className="sectionBox">
-                    <div
-                        style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            width: '100%',
-                            height: '30px',
-                            boxSizing: 'border-box'
-                        }}
-                    >
-                        <div
-                            style={{
-                                width: '50%',
-                                cursor: 'pointer',
-                                backgroundColor: isOnInfo ? 'grey' : 'white'
-                            }}
-                            onClick={(e) => {
-                                e.preventDefault();
-                                setIsOnInfo(true);
-                                setIsOnGal(false);
-                            }}
-                        >공지사항</div>
-                        <div
-                            style={{
-                                width: '50%',
-                                cursor: 'pointer',
-                                backgroundColor: isOnGal ? 'grey' : 'white'
-                            }}
-                            onClick={(e) => {
-                                e.preventDefault();
-                                setIsOnInfo(false);
-                                setIsOnGal(true);
-                            }}
-                        >갤러리</div>
-
-
-                    </div>
-                    <div
-                        style={{
-                            width: '100%',
-                            height: 'calc(100% - 30px)',
-                            display: isOnInfo ? 'block' : 'none',
-                            backgroundColor: isOnInfo ? 'grey' : 'white'
-                        }}
-                    >공지사항 내용</div>
-                    <div
-                        style={{
-                            width: '100%',
-                            height: 'calc(100% - 30px)',
-                            display: isOnGal ? 'block' : 'none',
-                            backgroundColor: isOnGal ? 'grey' : 'white'
-                        }}
-                    >갤러리 내용</div>
-                </div>
-                <div className="sectionBox">베너</div>
-                <div className="sectionBox">바로가기</div>
+                <MySection />
             </Section>
 
             <Footer>
-                <div
-                    style={{
-                        width: '200px',
-                        height: '100%',
-                        borderRight: '1px solid #000'
-                    }}
-                >LOGO</div>
-                <div
-                    style={{
-                        width: '800px',
-                        height: '100%',
-                        borderRight: '1px solid #000'
-                    }}
-                >카피라이트</div>
-                <div
-                    style={{
-                        width: '200px',
-                        height: '100%'
-                    }}
-                >SNS</div>
+                <MyFooter />
             </Footer>
         </Container>
     );
