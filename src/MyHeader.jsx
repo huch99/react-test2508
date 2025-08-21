@@ -2,42 +2,17 @@ import React from 'react';
 
 const MyHeader = () => {
     return (
-        <>
-            <div className='rubik-bubbles-regular'
-                style={{
-                    width: '200px',
-                    height: '100%',
-                    textAlign: 'center',
-                    fontSize: '30px',
-                    padding: 0,
-                    boxShadow: '0 0 5px 2px #ccc',
-                    borderRadius: '20px'
-                }}
-            >
+        <div style={{ display: 'flex', alignItems: 'center', height: 80, background: '#fff', borderRadius: 16, margin: '20px auto', maxWidth: 1200, boxShadow: '0 2px 8px #eee' }}>
+            <div className='rubik-bubbles-regular' style={{ width: 200, textAlign: 'center', fontSize: 30 }}>
                 <span className="red">J</span>
                 <span className="yellow">U</span>
                 <span className="blue">S</span>
                 <span className="purple">T</span> <br />
                 <span>Shopping</span>
             </div>
-
-            <div
-                style={{
-                    width: 'calc(100% - 200px)',
-                    height: '100%',
-                    padding: '25px'
-                }}
-            >
-                <ul
-                    style={{
-                        listStyleType: 'none',
-                        display: 'flex',
-                        flexDirection: 'row',
-                        margin: '0 0 0 325px'
-                    }}
-                >
-                    <li className="topMenu"
-                    >탑
+            <nav style={{ flex: 1, paddingLeft: 40 }}>
+                <ul style={{ listStyle: 'none', display: 'flex', gap: 40, margin: 0, padding: 0, height: 80, alignItems: 'center' }}>
+                    <li className="topMenu">탑
                         <ul>
                             <li className="subMenu">블라우스</li>
                             <li className="subMenu">티</li>
@@ -70,8 +45,8 @@ const MyHeader = () => {
                         </ul>
                     </li>
                 </ul>
-            </div>
-        </>
+            </nav>
+        </div>
     );
 };
 
