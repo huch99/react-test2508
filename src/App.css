@@ -27,6 +27,8 @@ body {
   padding: 8px 0;
   border-radius: 8px;
   transition: background 0.2s, color 0.2s;
+  width: 150px;
+  background: none;
 }
 .topMenu:hover {
   background: #000;
@@ -36,12 +38,12 @@ body {
   display: none;
   position: absolute;
   left: 0;
-  top: 36px;
+  top: 100%; /* 탑메뉴 아래에 딱 붙게 */
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 8px #eee;
-  min-width: 120px;
-  z-index: 10;
+  box-shadow: 0 4px 16px #eee;
+  width: 150px; /* 탑메뉴와 동일하게 고정 */
+  z-index: 100;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -57,6 +59,8 @@ body {
   background: #fff;
   border-radius: 0;
   transition: background 0.2s, color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
 }
 .subMenu:last-child {
   border-bottom: none;
@@ -64,4 +68,13 @@ body {
 .subMenu:hover {
   background: #000;
   color: #fff;
+}
+
+/* 이미지 오버시 어두워짐 효과 */
+.slider-img {
+  transition: filter 0.3s;
+}
+.slider-img:hover {
+  filter: brightness(0.7);
+  cursor: pointer;
 }

@@ -90,6 +90,7 @@ const ImageSlider = () => {
                         style={{ width: IMAGE_WIDTH, height: 300, flexShrink: 0, position: 'relative' }}
                     >
                         <img
+                            className="slider-img"
                             src={src}
                             style={{ width: IMAGE_WIDTH, height: 300, objectFit: 'cover', borderRadius: 16 }}
                             alt={`slide-${idx}`}
